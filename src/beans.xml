@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+<bean id="service" class="com.rakuten.spring.beans.ProductService">
+<!--  Collaboration of two or more beans is called Wiring ... -->
+	<property name="rep" ref="repository"></property>
+</bean>
+<bean id="repository"  class="com.rakuten.spring.beans.ProductRepository">
+</bean>
+</beans>
